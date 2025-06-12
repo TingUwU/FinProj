@@ -1,29 +1,3 @@
-'''
-#檢查用
-import network
-import utime
-
-SSID = "K"        # WiFi名稱
-PASSWORD = "!!!78490"    # WiFi密碼
-
-sta = network.WLAN(network.STA_IF)
-sta.active(True)
-sta.connect(ssid, password)
-
-max_wait = 20
-while max_wait > 0:
-    if sta.isconnected():
-        print("Wi-Fi 已連線！")
-        print("IP 位址:", sta.ifconfig()[0])
-        break
-    max_wait -= 1
-    print("等待 Wi-Fi 連線...", max_wait)
-    utime.sleep(1)
-
-if not sta.isconnected():
-    print("Wi-Fi 連線失敗！")
-'''
-
 import urequests, ujson
 import xtools, utime
 from machine import Pin, UART
@@ -32,8 +6,8 @@ from umqtt.simple import MQTTClient
 
 xtools.connect_wifi_led()
 
-ADAFRUIT_IO_USERNAME = "UwUyeet"
-ADAFRUIT_IO_KEY = "aio_lbLP55BdPfy7YXH4gpyebmMqDyxu"
+ADAFRUIT_IO_USERNAME = ""
+ADAFRUIT_IO_KEY = ""
 FEED = "target_city"
 FEED_TEMP = "target-city-temp"
 
