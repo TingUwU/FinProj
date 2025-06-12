@@ -6,8 +6,8 @@ from umqtt.simple import MQTTClient
 
 xtools.connect_wifi_led()
 
-ADAFRUIT_IO_USERNAME = ""
-ADAFRUIT_IO_KEY = ""
+#ADAFRUIT_IO_USERNAME = ""
+#ADAFRUIT_IO_KEY = ""
 FEED = "target_city"
 FEED_TEMP = "target-city-temp"
 
@@ -34,8 +34,8 @@ txt = None
 client = MQTTClient (
     client_id = xtools.get_id(),
     #server = "io.adafruit.com",
-    user = ADAFRUIT_IO_USERNAME,
-    password = ADAFRUIT_IO_KEY,
+    #user = ADAFRUIT_IO_USERNAME,
+    #password = ADAFRUIT_IO_KEY,
     ssl = False,
 )
 
