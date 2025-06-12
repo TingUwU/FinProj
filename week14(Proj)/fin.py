@@ -33,7 +33,7 @@ txt = None
 # MQTT 客戶端
 client = MQTTClient (
     client_id = xtools.get_id(),
-    server = "io.adafruit.com",
+    #server = "io.adafruit.com",
     user = ADAFRUIT_IO_USERNAME,
     password = ADAFRUIT_IO_KEY,
     ssl = False,
